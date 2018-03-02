@@ -1,4 +1,4 @@
-package com.toyRobot.Model;
+package com.toyRobot.model;
 
 
 public class ToyRobot {

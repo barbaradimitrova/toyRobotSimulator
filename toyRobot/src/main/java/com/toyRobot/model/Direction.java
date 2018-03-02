@@ -1,4 +1,4 @@
-package com.toyRobot.Model;
+package com.toyRobot.model;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -9,13 +9,11 @@ public enum Direction {
     SOUTH(2),
     WEST(3);
 
-
     private int directionIndex;
 
     Direction(int directionIndex) {
         this.directionIndex = directionIndex;
     }
-
 
     private static Map<Integer, Direction> directionMap = new HashMap<>();
 

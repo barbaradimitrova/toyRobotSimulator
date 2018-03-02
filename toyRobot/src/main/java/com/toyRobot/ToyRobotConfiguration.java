@@ -1,8 +1,8 @@
 package com.toyRobot;
 
-import com.toyRobot.App.GameApp;
-import com.toyRobot.Model.Position;
-import com.toyRobot.Model.ToyRobot;
+import com.toyRobot.app.GameApp;
+import com.toyRobot.model.Position;
+import com.toyRobot.model.ToyRobot;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 

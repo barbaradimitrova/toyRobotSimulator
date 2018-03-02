@@ -1,6 +1,6 @@
-package com.toyRobot.Endpoint;
+package com.toyRobot.endpoint;
 
-import com.toyRobot.App.GameApp;
+import com.toyRobot.app.GameApp;
 import net.minidev.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import static com.toyRobot.Model.Command.valueOf;
+import static com.toyRobot.model.Command.valueOf;
 
 
 @RestController

@@ -1,7 +1,7 @@
 package com.toyRobot;
 
-import com.toyRobot.App.GameApp;
-import com.toyRobot.Endpoint.CommandEndpoint;
+import com.toyRobot.app.GameApp;
+import com.toyRobot.endpoint.CommandEndpoint;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mockito;
@@ -19,7 +19,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 @RunWith(SpringRunner.class)
 @WebMvcTest(CommandEndpoint.class)
-public class CommandEndpointIntegrationTest {
+public class CommandEndpointTest {
 
     @MockBean
     GameApp gameApp;

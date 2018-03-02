@@ -1,15 +1,12 @@
-package com.toyRobot.Model;
-
-import org.springframework.beans.factory.annotation.Autowired;
+package com.toyRobot.model;
 
 public class Position {
-    private final int DIMENSION_OF_BOARD = 5;
+    private final int DIMENSION_OF_SQUARE_BOARD = 5;
 
     private int x;
     private int y;
     private Direction direction;
 
-    @Autowired
     public Position() {
     }
 
@@ -39,6 +36,6 @@ public class Position {
 
     public boolean isValidPosition(int value) {
 
-        return ((value <= DIMENSION_OF_BOARD) && (value >= 0));
+        return ((value <= DIMENSION_OF_SQUARE_BOARD) && (value >= 0));
     }
 }

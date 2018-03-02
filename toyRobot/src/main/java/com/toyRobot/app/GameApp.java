@@ -1,12 +1,12 @@
-package com.toyRobot.App;
+package com.toyRobot.app;
 
-import com.toyRobot.Model.Command;
-import com.toyRobot.Model.Direction;
-import com.toyRobot.Model.Position;
-import com.toyRobot.Model.ToyRobot;
+import com.toyRobot.model.Command;
+import com.toyRobot.model.Direction;
+import com.toyRobot.model.Position;
+import com.toyRobot.model.ToyRobot;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import static com.toyRobot.Model.Direction.valueOf;
+import static com.toyRobot.model.Direction.valueOf;
 
 public class GameApp {
 
@@ -71,7 +71,6 @@ public class GameApp {
                 moveEastWest(x, -1);
         }
     }
-
 
     private void moveNorthSouth(int y, int i) {
         int newY = y + i;
