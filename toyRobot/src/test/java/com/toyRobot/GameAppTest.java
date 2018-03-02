@@ -46,6 +46,21 @@ public class GameAppTest {
         String expected = "ROBOT MISSING";
         assertEquals(expected,toyRobot.toString());
     }
+    @Test
+    public void resolveCommandTestCase5() {
+        Position position = new Position();
+        ToyRobot toyRobot = new ToyRobot(position);
+        GameApp gameApp = new GameApp(toyRobot, position);
+
+        gameApp.resolveCommand("PLACE 5,5,EAST");
+        gameApp.resolveCommand("MOVE");
+        gameApp.resolveCommand("RIGHT");
+        gameApp.resolveCommand("MOVE");
+        gameApp.resolveCommand("MOVE");
+        gameApp.resolveCommand("REPORT");
+        String expected = "5,3,SOUTH";
+        assertEquals(expected,toyRobot.toString());
+    }
 
 
 }
