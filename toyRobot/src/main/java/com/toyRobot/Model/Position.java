@@ -38,6 +38,7 @@ public class Position {
     }
 
     public boolean isValidPosition(int value) {
-        return (value <= DIMENSION_OF_BOARD);
+
+        return ((value <= DIMENSION_OF_BOARD) && (value >= 0));
     }
 }

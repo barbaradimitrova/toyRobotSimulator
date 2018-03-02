@@ -27,13 +27,19 @@ public class GameApp {
         Command command = Command.valueOf(commandArgs[0]);
         switch (command) {
             case MOVE:
-                move();
+                if (position.getDirection()!= null) {
+                    move();
+                }
                 break;
             case LEFT:
-                left();
+                if (position.getDirection()!= null) {
+                    left();
+                }
                 break;
             case RIGHT:
-                right();
+                if (position.getDirection()!= null) {
+                    right();
+                }
                 break;
             case PLACE:
                 place(commandArgs[1]);
@@ -46,23 +52,23 @@ public class GameApp {
     }
 
     private void move() {
+
         Direction direction = position.getDirection();
         int x = position.getX();
         int y = position.getY();
-        if (direction != null) {
-            switch (direction) {
-                case NORTH:
-                    moveNorthSouth(y, 1);
-                    break;
-                case SOUTH:
-                    moveNorthSouth(y, -1);
-                    break;
-                case EAST:
-                    moveEastWest(x, 1);
-                    break;
-                case WEST:
-                    moveEastWest(x, -1);
-            }
+
+        switch (direction) {
+            case NORTH:
+                moveNorthSouth(y, 1);
+                break;
+            case SOUTH:
+                moveNorthSouth(y, -1);
+                break;
+            case EAST:
+                moveEastWest(x, 1);
+                break;
+            case WEST:
+                moveEastWest(x, -1);
         }
     }
 
@@ -86,6 +92,7 @@ public class GameApp {
         position.setDirection(direction.turnLeft());
     }
 
+
     private void right() {
         Direction direction = position.getDirection();
         position.setDirection(direction.turnRight());
@@ -101,10 +108,12 @@ public class GameApp {
         int x = Integer.parseInt(args[0]);
         int y = Integer.parseInt(args[1]);
         Direction direction = valueOf(args[2]);
-        position.setX(x);
-        position.setY(y);
-        position.setDirection(direction);
-        toyRobot = new ToyRobot(position);
+        if (position.isValidPosition(x) && position.isValidPosition(y)) {
+            position.setX(x);
+            position.setY(y);
+            position.setDirection(direction);
+            toyRobot = new ToyRobot(position);
+        }
     }
 }
 
