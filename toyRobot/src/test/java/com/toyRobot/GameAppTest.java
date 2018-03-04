@@ -52,7 +52,7 @@ public class GameAppTest {
         ToyRobot toyRobot = new ToyRobot(position);
         GameApp gameApp = new GameApp(toyRobot, position);
 
-        gameApp.resolveCommand("PLACE 6,6,EAST");
+        gameApp.resolveCommand("PLACE -1,6,EAST");
         gameApp.resolveCommand("MOVE");
         gameApp.resolveCommand("RIGHT");
         gameApp.resolveCommand("MOVE");
@@ -81,4 +81,18 @@ public class GameAppTest {
         assertEquals(expected,toyRobot.toString());
     }
 
+    @Test
+    public void rightMovementFirst() {
+        Position position = new Position();
+        ToyRobot toyRobot = new ToyRobot(position);
+        GameApp gameApp = new GameApp(toyRobot, position);
+
+        gameApp.resolveCommand("RIGHT");
+        gameApp.resolveCommand("MOVE");
+        gameApp.resolveCommand("PLACE 0,0,EAST");
+        gameApp.resolveCommand("MOVE");
+        gameApp.resolveCommand("REPORT");
+        String expected = "1,0,EAST";
+        assertEquals(expected,toyRobot.toString());
+    }
 }
