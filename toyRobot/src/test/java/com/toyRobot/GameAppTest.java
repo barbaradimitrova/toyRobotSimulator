@@ -52,7 +52,7 @@ public class GameAppTest {
         ToyRobot toyRobot = new ToyRobot(position);
         GameApp gameApp = new GameApp(toyRobot, position);
 
-        gameApp.resolveCommand("PLACE 6,6,EAST");
+        gameApp.resolveCommand("PLACE 6,6,WEST");
         gameApp.resolveCommand("MOVE");
         gameApp.resolveCommand("RIGHT");
         gameApp.resolveCommand("MOVE");
