@@ -13,7 +13,7 @@ Endpoint Integration test with mocked GameApp response is shown in EndpointInteg
 Authowired and Beans annotation is used for SpringBoot set up. 
 
 Examples of post requests:
-{"command":"PLACE 0,0,NORTH"}
-{"command":"MOVE"}
-{"command":"RIGHT"}
-{"command":"REPORT"}
+- {"command":"PLACE 0,0,NORTH"}
+- {"command":"MOVE"}
+- {"command":"RIGHT"}
+- {"command":"REPORT"}
